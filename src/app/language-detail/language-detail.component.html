@@ -1,0 +1,10 @@
+<ng-container *ngIf="language">
+  <h2>{{language.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{language.id}}</div>
+  <img [src]="language.image" alt="">
+  <div>
+    <label>name:
+      <input [(ngModel)]="language.name" placeholder="name" />
+    </label>
+  </div>
+</ng-container>

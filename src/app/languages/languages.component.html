@@ -4,13 +4,5 @@
     <span class="badge">{{language.id}}</span> {{language.name}}
   </li>
 </ul>
-<ng-container *ngIf="selectedLanguage">
-  <h2>{{selectedLanguage.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedLanguage.id}}</div>
-  <img [src]="selectedLanguage.image" alt="">
-  <div>
-    <label>name:
-      <input [(ngModel)]="selectedLanguage.name" placeholder="name" />
-    </label>
-  </div>
-</ng-container>
+<app-language-detail [language]="selectedLanguage"></app-language-detail>
+
