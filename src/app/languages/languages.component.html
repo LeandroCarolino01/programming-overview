@@ -1,6 +1,16 @@
-<h2>My Heroes</h2>
+<h2>My Languages</h2>
 <ul class="heroes">
-  <li *ngFor="let language of languages">
+  <li *ngFor="let language of languages" (click)="onSelect(language)" [class.selected]="language === selectedLanguage">
     <span class="badge">{{language.id}}</span> {{language.name}}
   </li>
 </ul>
+<ng-container *ngIf="selectedLanguage">
+  <h2>{{selectedLanguage.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedLanguage.id}}</div>
+  <img [src]="selectedLanguage.image" alt="">
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedLanguage.name" placeholder="name" />
+    </label>
+  </div>
+</ng-container>

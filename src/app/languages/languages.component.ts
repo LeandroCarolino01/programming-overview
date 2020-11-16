@@ -10,9 +10,14 @@ import { LANGUAGES } from '../mock-languages';
 export class LanguagesComponent implements OnInit {
   //This binds to the array of mock data to be rendered in the template
   languages =   LANGUAGES;
+  selectedLanguage: Language;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelect(language:Language){
+    this.selectedLanguage = language
   }
 
 }

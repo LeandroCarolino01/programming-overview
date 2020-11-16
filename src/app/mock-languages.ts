@@ -18,14 +18,14 @@ export const LANGUAGES: Language[] = [
   {
     id:3,
     name: 'Java',
-    image: 'assets/java.png',
+    image: 'assets/java.jpg',
     description: 'test',
     year: '1999'
   },
   {
     id:4,
     name: 'Python',
-    image: 'assets/python.png',
+    image: 'assets/python.jpg',
     description: 'test',
     year: '1999'
   },
@@ -39,7 +39,7 @@ export const LANGUAGES: Language[] = [
   {
     id:6,
     name: 'C',
-    image: 'assets/c.png',
+    image: 'assets/c.jpg',
     description: 'test',
     year: '1999'
   },
