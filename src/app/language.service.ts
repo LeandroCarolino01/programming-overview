@@ -8,11 +8,16 @@ import { MessageService } from './message.service';
   providedIn: 'root'
 })
 export class LanguageService {
-  languages = LANGUAGES;
+
   constructor(private message:MessageService) { }
 
   getLanguages(): Observable<Language[]> {
     this.message.add('Language service: fetched languages')
-    return of(this.languages);
+    return of(LANGUAGES);
+  }
+
+  getLanguage(id: number): Observable<Language> {
+    this.message.add(`Hero service: fetched id${id}`)
+    return of(LANGUAGES.find(language => language.id === id))
   }
 }

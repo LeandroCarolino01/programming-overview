@@ -11,7 +11,7 @@ import { MessageService } from '../message.service';
 export class LanguagesComponent implements OnInit {
   //This binds to the array of mock data to be rendered in the template
   languages:  Language[];
-  selectedLanguage: Language;
+
 
   constructor(private languageService:LanguageService, private messages:MessageService) { }
 
@@ -19,10 +19,6 @@ export class LanguagesComponent implements OnInit {
     this.getLanguages();
   }
 
-  onSelect(language:Language){
-    this.selectedLanguage = language
-    this.messages.add(`Languages Component: Selected Language id is ${language.id}`)
-  }
 
   getLanguages(): void {
      this.languageService.getLanguages()
